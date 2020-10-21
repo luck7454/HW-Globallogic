@@ -1,0 +1,3 @@
+---
+# defaults file for role_for_defining_variable
+path: "/etc/issue"

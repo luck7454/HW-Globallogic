@@ -1,0 +1,15 @@
+---
+- name: Create file
+  hosts: iaas
+  become: yes
+
+  roles:
+          - create_file_with_rights0500
+
+- name: Define variable
+  hosts: all_virt_machines
+  become: yes
+                           
+  roles:
+          - role_for_defining_variable
+  

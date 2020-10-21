@@ -1,0 +1,4 @@
+---
+# defaults file for create_file_with_rights050
+path: "/etc/iaac"
+mode: "0500"

@@ -1,0 +1,9 @@
+---
+# tasks file for role_for_defining_variabl
+- name: define content as variable
+    shell: cat /etc/issue
+    register: content_file
+
+- name: print hostnames together with registered variables
+    debug:
+            msg: "Hostname: {{ansible_hostname}} {{inventory_hostname}} Registered_var {{content_issue.stdout}}"

@@ -1,0 +1,7 @@
+---
+# tasks file for create_file_with_rights050
+- name: Creating new file with rights
+  file:
+          path: "/etc/iaac"
+          state: touch
+          mode: 0500

@@ -1,0 +1,21 @@
+[group1]
+client01 ansible_host=192.168.178.109 ansible_user=bob ansible_ssh_private_key_file=/home/ihor/.ssh/client01
+
+[group2]
+client02 ansible_host=192.168.178.110 ansible_user=nick ansible_ssh_private_key_file=/home/ihor/.ssh/client02
+
+[group3]
+client03 ansible_host=192.168.178.111 ansible_user=jack ansible_ssh_private_key_file=/home/ihor/.ssh/client03
+
+[group4]
+client04 ansible_host=192.168.178.112 ansible_user=root ansible_ssh_private_key_file=/home/ihor/.ssh/client04
+
+[iaas:children]
+group1
+group2
+
+[all_virt_machines:children]
+group1
+group2
+group3
+group4
